@@ -3,24 +3,26 @@
 
 class Autobus {
 
-	int number;
-	std::string driver;
-	std::vector<std::string> stop;
+	int numero;
+	std::string conducteur;
+	std::vector<std::string> arrets;
 
 public:
 
-	Autobus(int new_number, std::string new_driver);
+	Autobus(int nouv_numero, std::string nouv_conducteur);
 
 	int get_numero();
 
-	int get_conducteur();
+	std::string get_conducteur();
 
-	void set_conducteur(std::string new_driver);
+	void set_conducteur(std::string nouv_conducteur);
 
-	std::vector<std::string> get_station_stop();
+	std::vector<std::string> get_arrets_station();
 
-	void add_station_stop(std::string new_stop);
+	void add_arret_station(std::string nouv_arret);
 
-	void reset_station_stop();
+	void reset_arret_station();
+
+	~Autobus();
 
 };
